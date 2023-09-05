@@ -1,0 +1,6 @@
+type Query {
+    hello: TaskSystem
+    testHello(data: TransferData): TaskSystem
+
+    calculatePara(data: TransferData): Msg
+}

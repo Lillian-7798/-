@@ -1,0 +1,9 @@
+server:
+    port: 9090
+spring:
+    data:
+        mongodb:
+            uri: mongodb://localhost:27017/db
+    graphql:
+        graphiql:
+            enabled: true

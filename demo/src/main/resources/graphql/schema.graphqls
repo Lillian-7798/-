@@ -1,0 +1,153 @@
+type BasicData {
+    totalWeight: Float
+    totalCost: Float
+}
+
+enum MaterialType{
+    material_1
+    material_2
+}
+
+type BodyStructure {
+    materialType: MaterialType
+    bodyWeight: Float
+    bodyCost: Float
+}
+
+type EnergySystem {
+    energyEndurance: Float
+    energyAbility: Float
+    energyWeight: Float
+    energyCost: Float
+}
+
+type FlightPerformance {
+    flightAltitude: Float
+    flightSpeed: Float
+    flightRange: Float
+    flightEndurance: Float
+}
+
+type PropulsionSystem {
+    propulsionAbility: Float
+    propulsionWeight: Float
+    propulsionCost: Float
+}
+
+type TaskSystem {
+    taskWeight: Float
+    taskCost: Float
+}
+
+type GroundSupport {
+    groundCost: Float
+}
+
+type AerodynamicConfiguration {
+    length: Float
+    wing: Float
+    AR: Float
+}
+
+type Plan {
+    flightPerformance: FlightPerformance
+    basicData: BasicData
+    aerodynamicConfiguration: AerodynamicConfiguration
+    bodyStructure: BodyStructure
+    energySystem: EnergySystem
+    propulsionSystem: PropulsionSystem
+    taskSystem: TaskSystem
+    groundSupport: GroundSupport
+}
+
+type Msg {
+    msg: Int
+    errorPara: [String]
+    plan: Plan
+    change: [String]
+}
+
+
+
+
+
+
+
+input TransferData {
+    plan: PlanInput
+    update: [String]
+}
+
+input BasicDataInput {
+    totalWeight: Float
+    totalCost: Float
+}
+
+
+
+input BodyStructureInput {
+    materialType: MaterialType
+    bodyWeight: Float
+    bodyCost: Float
+}
+
+input EnergySystemInput {
+    energyEndurance: Float
+    energyAbility: Float
+    energyWeight: Float
+    energyCost: Float
+}
+
+input FlightPerformanceInput {
+    flightAltitude: Float
+    flightSpeed: Float
+    flightRange: Float
+    flightEndurance: Float
+}
+
+input PropulsionSystemInput {
+    propulsionAbility: Float
+    propulsionWeight: Float
+    propulsionCost: Float
+}
+
+input TaskSystemInput {
+    taskWeight: Float
+    taskCost: Float
+}
+
+input GroundSupportInput {
+    groundCost: Float
+}
+
+input AerodynamicConfigurationInput {
+    length: Float
+    wing: Float
+    AR: Float
+}
+
+input PlanInput {
+    flightPerformance: FlightPerformanceInput
+    basicData: BasicDataInput
+    aerodynamicConfiguration: AerodynamicConfigurationInput
+    bodyStructure: BodyStructureInput
+    energySystem: EnergySystemInput
+    propulsionSystem: PropulsionSystemInput
+    taskSystem: TaskSystemInput
+    groundSupport: GroundSupportInput
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

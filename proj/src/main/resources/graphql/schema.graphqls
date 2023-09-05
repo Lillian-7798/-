@@ -1,0 +1,23 @@
+type Query{
+    find(json: String!):[TemplateForReturn]!
+}
+type TemplateForReturn{
+    id:Int,
+    attributes:[AttributesMap]
+}
+type AttributesMap{
+    key:String,
+    val:BasicAttribute
+}
+type BasicAttribute{
+    attrs:[Attribute]
+}
+type Attribute{
+    name:String,
+    type:String,
+    match:String,
+    strVal:String,
+    numVal:Float,
+    unit:String
+
+}
